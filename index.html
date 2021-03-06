@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web sayt</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+</head>
+<body>
+<h1>Galery</h1>
+<input type="text" id="img">
+<button>Click Me</button>
+
+
+<div id="ul">
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+       $('button').click(function () {
+       var imgUrl = $('#img').val();
+       $('img').attr('src',imgUrl)
+           $('#img').val('');
+       $('#ul').append('<img src='+imgUrl+' width="50%">')
+       })
+    });
+
+</script>
+</body>
+</html>
